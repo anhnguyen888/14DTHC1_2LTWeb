@@ -1,0 +1,30 @@
+﻿@model IEnumerable<_14DTHC1_2.Models.Book>
+@{
+    ViewBag.Title = "ListBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List books</h2>
+<div class="row list-books">
+    @foreach (var book in Model)
+    {
+        <div class="col-md-4 col-xs-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @book.Title
+                    <div class="pull-right">
+                        @Html.ActionLink("Edit", "Edit", new { id=book.BookId })
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <img src="/@book.Cover" title="hinh anh dai dien"/>
+                    <p>
+                        @book.Author
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+    }
+</div>
