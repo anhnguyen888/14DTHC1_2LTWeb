@@ -169,13 +169,31 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709270049079_InitialASPNETIdentityTable.cs" />
+    <Compile Include="Migrations\201709270049079_InitialASPNETIdentityTable.Designer.cs">
+      <DependentUpon>201709270049079_InitialASPNETIdentityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709270121489_CreateCourseAndCategoryTable.cs" />
+    <Compile Include="Migrations\201709270121489_CreateCourseAndCategoryTable.Designer.cs">
+      <DependentUpon>201709270121489_CreateCourseAndCategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709270150082_populateCategoryDataSample.cs" />
+    <Compile Include="Migrations\201709270150082_populateCategoryDataSample.Designer.cs">
+      <DependentUpon>201709270150082_populateCategoryDataSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="ViewModels\CourseViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -242,6 +260,7 @@
     <Content Include="Views\Book\ListBook.cshtml" />
     <Content Include="Views\Book\ListBookAuto.cshtml" />
     <Content Include="Views\Book\Edit.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -253,6 +272,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709270049079_InitialASPNETIdentityTable.resx">
+      <DependentUpon>201709270049079_InitialASPNETIdentityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709270121489_CreateCourseAndCategoryTable.resx">
+      <DependentUpon>201709270121489_CreateCourseAndCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709270150082_populateCategoryDataSample.resx">
+      <DependentUpon>201709270150082_populateCategoryDataSample.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
