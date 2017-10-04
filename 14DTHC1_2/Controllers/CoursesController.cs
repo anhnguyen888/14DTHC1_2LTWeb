@@ -16,7 +16,7 @@ namespace _14DTHC1_2.Controllers
         }
         // Create Courses
         /// <summary>
-        /// Create new course 
+        /// Create new course anhnguyen999 - Dev2
         /// </summary>
         /// <returns></returns>
         public ActionResult Create()
