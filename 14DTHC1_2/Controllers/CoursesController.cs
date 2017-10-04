@@ -18,6 +18,7 @@ namespace _14DTHC1_2.Controllers
         /// <summary>
         /// Conflict CoursesController with Dev2
         /// Modify it
+
         /// </summary>
         /// <returns></returns>
         public ActionResult Create()
